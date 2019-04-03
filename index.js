@@ -26,6 +26,9 @@ const getJobs = async () => {
             jobsObj.company = document.querySelectorAll(".company")[i].innerText
             jobsObj.summary = document.querySelectorAll(".summary")[i].innerText
             jobsObj.date = document.querySelectorAll(".date")[i].innerText
+            jobsObj.link = document.querySelectorAll(
+              ".jobsearch-SerpJobCard > h2 > a"
+            )[i].href
             return jobsObj
           }, i)
           await jobsArr.push(jobsObj)
